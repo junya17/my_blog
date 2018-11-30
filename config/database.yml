@@ -1,0 +1,29 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: my_blog_development
+  pool: 5
+  username: junya
+  password: shinkai1219
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: my_blog_test
+  pool: 5
+  username: junya
+  password: shinkai1219
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: my_blog_production
+  pool: 5
+  username: junya
+  password: shinkai1219
+  host: localhost
