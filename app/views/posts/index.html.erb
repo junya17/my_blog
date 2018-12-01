@@ -1,0 +1,12 @@
+<div class="container mt-5">
+	<% @posts.each do | post |%>
+		<div class="card mb-4">
+			<%= image_tag(post.image, alt:"Card image cap", class: "card-img-top")%><br>
+			<div class="card-body">
+			<h5 class="card-title"><%= link_to  post.title , post %></h5>
+			<p class="card-text"><small class="text-muted">投稿：<%= post.created_at.strftime('%Y年%m月%d日 %H:%M') %></small></p>
+			</div>
+		</div>
+	<%end%>
+</div>
+	

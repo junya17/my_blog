@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  resources :blog
+  root to: 'posts#index'
+  resources :admin
+  resources :posts
 end
