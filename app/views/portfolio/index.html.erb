@@ -1,8 +1,99 @@
 <div class="container">
-	<div class="text-center">
-		<%= image_tag('papillon.jpg', class: "rounded-circle") %>
+	<div class="header_image text-center mb-5">
+		<%= image_tag('papillon.jpg', class: "img-fluid rounded-circle w-50") %>
 	</div>
-	<h2>Welcome to My Portfolio</h2>
-	<p>36歳のフリーランス。 仕事や趣味として作成した作品を掲載しています。</p>
-	<%= link_to 'my Portfolio', portfolio_index_path ,class:"btn btn-primary"%>
+	<div class="header_content mb-5">
+		<h2>Welcome to My Portfolio</h2>
+		<p>36歳のフリーランス。 仕事や趣味として作成した作品を掲載しています。</p>
+	</div>
+</div>
+	<div class="about-me bg-dark p-5 mb-5">
+		<div class="container text-white">
+		<h3 class="text-center">経歴</h3>
+		<p>36歳のフリーランス。
+			建築の専門学校を卒業後、大工として15年間活動。
+			建築業と並行して、WEBサイトの運営、アフィリエイト、輸入ビジネスなどを経験。
+			アフィリエイトでは最高発生報酬80万円以上を達成。月間最大39,000PV。多くのキーワードで上位表示されています。 最大で月300件以上の商品を販売。 WEBサイト作成のスキル、デザイン、ライティング、マーケティングなども学ぶ。
+			プログラミングが趣味で初心者向け某プログラミングサイトのランキングで上位に入っている。他、udemyでは50以上のコースを受講。
+			現在は、福岡でフリーランスとしてWEBサイト運営を行う。
+		
+		</p>
+		<h3 class="bg-dark text-white text-center p-3">スキル</h3>
+		<div class="container text-white">
+			<div class="row">
+				<div class="col">
+					<h4>言語</h4>
+					<ul>
+						<li>HTML/CSS</li>
+						<li>Javascript</li>
+						<li>Python</li>
+						<li>Ruby</li>
+						<li>PHP</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h4>フレームワーク</h4>
+					<ul>
+						<li>Ruby on Rails</li>
+						<li>Django</li>
+					</ul>
+				</div>
+				<div class="w-100"></div>
+				<div class="col">
+					<h4>デザイン</h4>
+					<ul>
+						<li>Photoshop</li>
+						<li>Illustrator</li>
+						<li>XD</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h4>その他</h4>
+					<ul>
+						<li>SEO</li>
+						<li>WEBマーケティング</li>
+						<li>ライティング</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<h3 class="bg-dark text-white text-center p-3">趣味・興味</h3>
+		<p class="text-white">プログラミングのために始めた英語の勉強が趣味。日頃から見ている動画、聞いている音楽は英語圏のものが中心。ただし、中々上達しない。 サッカー観戦が趣味で国内、海外の試合を常にチェックしている。福岡県民だがサガン鳥栖のファン。</p>
+	</div>
+	</div>
+</div>
+<h3 class="text-center mb-3">My Portfolio</h3>
+	<div class="portfolio mb-5">
+		<div class="row">
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+			<div class="col-12 col-md-3">.col-12 .col-md-3</div>
+		</div>
+	</div>
+	<div class="contactform mb-5">
+		<div class="container">
+		<h3 class="text-center">CONTACT FORM</h3>
+		<form>
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Email address</label>
+				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Email address</label>
+				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Example textarea</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	</div>
 </div>
