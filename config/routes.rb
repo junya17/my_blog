@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   resources :admin
   resources :posts
-  
+  resources :portfolio
 end
