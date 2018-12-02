@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+	before_action :authenticate_account!
 	def index 
 		@posts = Post.page params[:page]
 	end
