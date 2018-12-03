@@ -38,3 +38,33 @@
 	 margin-right: 3px;
 	 margin-bottom: 2rem;
  }
+
+ .header_image {
+	min-height: 30rem;
+	position: relative;
+	display: table;
+	width: 100%;
+	height: auto;
+	padding-top: 10rem;
+	padding-bottom: 8rem;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 0%),url("../images/idea.jpg");
+	background-position: center center;
+ 	background-repeat: no-repeat;
+	background-size: cover;
+	height: 70vh;
+	margin-top: -4rem;  
+ }
+
+ .header_content {
+	display: block;
+	background: rgba(0, 0, 0, 0.735);
+ }
+
+ .header_content h2 {
+	 font-size: 4rem;
+ }
+
+ .header_content p{
+	 font-size: 1.5rem;
+ }
+
