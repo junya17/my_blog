@@ -2,6 +2,9 @@
 	<div class="container text-center text-white header_content p-5">
 		<h2>Welcome to My Portfolio</h2>
 		<p>36歳のフリーランス。 仕事や趣味として作成した作品を掲載しています。</p>
+		<div class="alert-primary">
+			<%= flash[:success]%>
+		</div>
 	</div>
 </section>
 <div class="about-me p-5 mb-5">
@@ -13,8 +16,7 @@
 			アフィリエイトでは１ヶ月に確定報酬80万円以上を達成。月間最大39,000PV。多くのキーワードで上位表示されています。 最大で月300件以上の商品を販売。
 			WEBサイト作成のスキル、デザイン、ライティング、マーケティングなども学ぶ。
 			プログラミングが趣味で初心者向け某プログラミングサイトのランキングで上位に入っている。他、udemyでは50以上のコースを受講。
-			現在は、福岡でフリーランスとしてWEBサイト運営を行う。
-
+			現在は、福岡でフリーランスとしてWEBサイト運営を行う
 		</p>
 		<h3 class="text-white text-center p-3">スキル</h3>
 		<div class="container text-white">
@@ -70,19 +72,19 @@
 				<p>Portfolio</p>
 			</div>
 			<div class="col-12 col-md-4 ">
-					<p>Portfolio</p>
+				<p>Portfolio</p>
 			</div>
 			<div class="col-12 col-md-4 ">
-					<p>Portfolio</p>
+				<p>Portfolio</p>
 			</div>
 			<div class="col-12 col-md-4 ">
-					<p>Portfolio</p>
+				<p>Portfolio</p>
 			</div>
 			<div class="col-12 col-md-4 ">
-					<p>Portfolio</p>
+				<p>Portfolio</p>
 			</div>
 			<div class="col-12 col-md-4 ">
-					<p>Portfolio</p>
+				<p>Portfolio</p>
 			</div>
 		</div>
 	</div>
@@ -90,21 +92,48 @@
 <div class="contactform mb-5">
 	<div class="container">
 		<h3 class="text-center">CONTACT FORM</h3>
-		<form>
-			<div class="form-group">
-				<label for="exampleFormControlInput1">Email address</label>
-				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+
+		<div class="form-group">
+			<%= form_with model:@contact, local: true do |form| %>
+			<% if @contact.errors.any? %>
+			<div id="error_explanation">
+				<h2>
+					<%= pluralize(@contact.errors.count, "error") %> prohibaited this post from being saved:</h2>
+				<ul>
+					<% @contact.errors.full_messages.each do |message| %>
+					<li>
+						<%= message %>
+					</li>
+					<% end %>
+				</ul>
 			</div>
-			<div class="form-group">
-				<label for="exampleFormControlInput1">Email address</label>
-				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			<% end %>
+			<div class="field">
+				<%= form.label :"お名前" %>
+				<%= form.text_field :name,required: true, :class=>"form-control" %>
 			</div>
-			<div class="form-group">
-				<label for="exampleFormControlTextarea1">Example textarea</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+			<div class="field">
+				<%= form.label :"E-mail adress" %>
+				<%= form.email_field :email, :class=>"form-control" %>
 			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
+
+			<div class="field">
+				<%= form.label :"お問い合わせ内容" %>
+				<%= form.text_area :text, required: true, :rows=>"3", :class=>"form-control" %>
+			</div>
+
+			<div class="field">
+				<%= form.label :"チェックを入れてください。" %>
+				<%= form.check_box :agreement, required: true%>
+			</div>
+
+			<div class="actions mt-2">
+				<%= form.submit :class=>"btn btn-primary" %>
+			</div>
+		</div>
+		<% end %>
 	</div>
 </div>
 </div>

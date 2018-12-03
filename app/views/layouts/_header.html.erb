@@ -16,10 +16,10 @@
 					</li>
 					<li class="nav-item">
 					<li class="nav-item">
-						<%= link_to 'ポートフォリオ', portfolio_index_path , target: "_blank" , class: "nav-link text-dark" %>
+						<%= link_to 'ポートフォリオ', portfolios_path , target: "_blank" , class: "nav-link text-dark" %>
 					</li>
 						<% if current_account %>
-						<%= link_to '管理画面', admin_index_path , class: "nav-link text-dark" %>
+						<%= link_to '管理画面', admins_path , class: "nav-link text-dark" %>
 					</li>
 					<li class="nav-item">
 						<%= link_to 'ログアウト', destroy_account_session_path, method: :delete , class: "nav-link text-dark" %>

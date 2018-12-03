@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :accounts
   root to: 'posts#index'
-  resources :admin
+  resources :admins
   resources :posts
-  resources :portfolio
+  resources :portfolios
+  resources :contacts
 end
