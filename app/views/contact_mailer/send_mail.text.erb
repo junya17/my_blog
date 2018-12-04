@@ -1,3 +1,5 @@
 <%= @contact.name %> 様 から問い合わせがありました。
 ・お問い合わせ内容
-<%= @contact.text %>
+テキスト：<%= @contact.text %>
+メールアドレス：<%= @contact.email %>
+送信日時：<%= @contact.created_at %>

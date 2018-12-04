@@ -5,5 +5,55 @@
 	<p>
 		<%= @post.content%>
 	</p>
+	<%= form_with(model: [@posts, Comment.new] , local: true, multipart: true) do |form| %>
+<% 
+=begin 
+%>
+	<% if post.errors.any? %>
+	  <div id="error_explanation">
+		<h2><%= pluralize(post.errors.count, "error") %> prohibaited this post from being saved:</h2>
+		<ul>
+		<% post.errors.full_messages.each do |message| %>
+		  <li><%= message %></li>
+		<% end %>
+		</ul>
+	  </div>
+	<% end %>
+<%
+=end 
+%>
+  <div class="form-group">
+	<div class="field">
+	  <%= form.label :"名前" %>
+	  <%= form.text_field :name, :class=>"form-control" %>
+	</div>
+
+	<div class="field mb-2">
+	  <%= form.label :"コメント" %>
+	  <%= form.text_area :comment, :rows=>"3",  :class=>"form-control" %>
+	</div>
+  
+	<div class="field">
+	  <%= form.hidden_field :post_id, value: @post.id , :rows=>"3",  :class=>"form-control" %>
+	</div>
+
+	<div class="actions mt-2">
+	  <%= form.submit "送信", :class=>"btn btn-primary" %>
+	</div>
+
+</div>
+  <% end %>
+  <hr>
+  <div class="comments mb-5">
+	<% @comments.each do | comment| %>
+	<% if comment.post_id == @post.id %>
+		<div class="comment p-2">
+			<p class="font-weight-light"><%= comment.name %></p>
+			<p class="commnet"><%= comment.comment %></p>
+		</div>
+		<hr>
+	<% end %>
+  <% end %>
+</div>
 </div>
 

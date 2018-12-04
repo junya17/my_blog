@@ -2,7 +2,8 @@ class PostsController < ApplicationController
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@posts = Post.page params[:page]
+		@posts = Post.page params[:page]	
+		session[:like] 
 	end
 
 	def new
@@ -10,6 +11,8 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		@comment = Comment.new
+		@comments = Comment.all
 	end
 
 	def create

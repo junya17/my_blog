@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :portfolios
   resources :contacts
+  resources :comments
 end
