@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
 		@contact = Contact.new(contact_params)
 		respond_to do |format|
 			if @contact.save
+			ContactMailer.send_mail(@contact).deliver_now
 			flash[:success] = '送信が完了しました。お問い合わせありがとうございます。'
 			  format.html { redirect_to portfolios_path }
 			  format.json { render :index, status: :created, location: portfolios_path }
