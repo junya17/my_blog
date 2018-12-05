@@ -1,0 +1,36 @@
+<p id="notice">
+  <%= notice %>
+</p>
+<div class="container">
+  <h1>カテゴリー一覧</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Memo</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @categories.each do |category| %>
+      <tr>
+        <th>
+          <%= category.id %>
+        </th>
+        <td>
+          <%= category.title %>
+        </td>
+        <td>
+          <%= category.memo %>
+        </td>
+        <td>
+          <%= link_to "関連記事" , category_path(category)%>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

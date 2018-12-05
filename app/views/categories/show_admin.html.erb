@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+    <p>
+  <strong>Title:</strong>
+  <%= @category.title %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @category.memo %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category)  , class: "badge badge-dark"%> |
+<%= link_to 'Back', categories_path  , class: "badge badge-dark"%>
+
+</div>
