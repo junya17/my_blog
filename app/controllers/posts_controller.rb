@@ -5,7 +5,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.page params[:page]
-    session[:like]
   end
 
   def new
