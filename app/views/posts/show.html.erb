@@ -5,7 +5,7 @@
 	</div>
 	<% end %>
 	<div style="text-align: center;">
-		<%= image_tag(@post.image, class: "img-fluid center-block", alt:"Card image cap" ) %>
+		<%= image_tag(@post.image, class: "img-fluid center-block mb-3", alt:"Card image cap" ) %>
 	</div>
 	<p>
 		<%= @post.content.html_safe%>
@@ -30,6 +30,9 @@
 	<%
 =end 
 %>
+
+<hr>
+<h3>コメントはこちら</h3>
 	<div class="form-group">
 		<div class="field">
 			<%= form.label :"名前" %>
@@ -63,7 +66,6 @@
 				<%= comment.comment %>
 			</p>
 		</div>
-		<hr>
 		<% end %>
 		<% end %>
 	</div>
