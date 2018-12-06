@@ -52,7 +52,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.active_storage.service = :amazon
+  config.active_storage.service = :local
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
