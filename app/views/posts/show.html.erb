@@ -8,7 +8,7 @@
 		<%= image_tag(@post.image, class: "img-fluid center-block", alt:"Card image cap" ) %>
 	</div>
 	<p>
-		<%= @post.content%>
+		<%= @post.content.html_safe%>
 	</p>
 	<%= form_with(model: [@posts, Comment.new] , local: true, multipart: true) do |form| %>
 	<% 
