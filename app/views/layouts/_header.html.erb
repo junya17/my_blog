@@ -16,16 +16,10 @@
 						<%= link_to 'ポートフォリオ', portfolios_path, class: "nav-link text-dark" %>
 					</li>
 					<% if current_account %>
-					<%= link_to '管理画面', admins_path , class: "nav-link text-dark" %>
+					<%= link_to '管理画面', admins_top_path	 , class: "nav-link text-dark" %>
 					</li>
 					<li class="nav-item">
 						<%= link_to 'ログアウト', destroy_account_session_path, method: :delete , class: "nav-link text-dark" %>
-					</li>
-					<li class="nav-item">
-						<%= link_to 'アカウント編集', edit_account_registration_path , class: "nav-link text-dark" %>
-					</li>
-					<li class="nav-item">
-						<%= link_to 'カテゴリー追加', new_category_path , class: "nav-link text-dark" %>
 					</li>
 					<% else %>
 
@@ -36,21 +30,7 @@
 	</nav>
 	<div class="header-title bg-dark p-5">
 		<div class="container text-center text-white">
-			<% 
-=begin 
-%>
-			<% if @posts %>
-			<h2>Well Come to MyBlog</h2>
-			<% elsif @post.title %>
-			<h2>
-				<%= link_to @post.title , post_path , :class=>"text-white"%>
-			</h2>
-			<% else %>
-			<h2>Admin</h2>
-			<%end%>
-			<% 
-=end
-%>
+				<h2><%= yield(:title) || 'SMALOG' %></h2> 
 		</div>
 	</div>
 	</div>

@@ -1,5 +1,38 @@
-<div class="container p-3">
-<h2>BlogNew</h2>
-<%= render 'form' , post: @post %>
+<div class="container">
+	<h2>新規投稿画面</h2>
+<%= form_with(model:@post, url: admins_path, local: true, method: :post ,multipart: true) do |form| %>
+<% if @post.errors.any? %>
+<div id="error_explanation">
+	<h2>
+		<%= pluralize(@post.errors.count, "error") %> prohibaited this post from being saved:</h2>
+	<ul>
+		<% @post.errors.full_messages.each do |message| %>
+		<li>
+			<%= message %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<div class="form-group">
+	<%= form.label :タイトル %>
+	<%= form.text_field :title, id: :post_title, :class=>"form-control" %>
 </div>
 
+<div class="form-group">
+	<%= form.label :画像 %>
+	<%= form.file_field :image, id: :image_title, :class=>"form-control-file" %>
+</div>
+
+<div class="form-group">
+	<%= form.label :本文 %>
+	<%= form.text_area :content, id: :content, :rows=>"3",  :class=>"form-control" %>
+</div>
+
+<div class="actions mt-2">
+	<%= form.submit "送信" ,:class=>"btn btn-primary" %>
+</div>
+
+</div>
+<% end %>
+</div>

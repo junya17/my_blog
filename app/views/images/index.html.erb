@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1>画像</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+		<td><%= image.name %></td>
+		<% if image.image.attached? %>
+		<td> <%= image_tag image.image ,width: "100px" %> </td>
+		<% end %>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '<New Image', new_image_path , class: "badge badge-dark"%>
+
+</div>

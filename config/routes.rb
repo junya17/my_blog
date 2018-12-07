@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :images
   get 'categories/index_admin'
   get 'categories/show_admin/:id' => 'categories#show_admin'
   resources :categories
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
     put 'accounts' => 'devise/registrations#update', :as => 'user_registration'
   end
   root to: 'posts#index'
+  get 'admins/top'
   resources :admins
   resources :posts
   get 'posts/post_categories' => 'posts#post_categories'

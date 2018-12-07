@@ -3,8 +3,8 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
-    if @comment.save 
-      flash[:notice] = "コメントの投稿が成功しました！" 
+    if @comment.save
+      flash[:notice] = 'コメントの投稿が成功しました！'
       redirect_back(fallback_location: root_path)
     else
       redirect_back(fallback_location: root_path)

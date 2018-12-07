@@ -36,13 +36,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'aws-sdk-s3', require: false
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'carrierwave', '0.10.0'
 gem 'devise'
+gem 'fog', '1.36.0'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'mini_magick'
 gem 'quilljs-rails'
-gem 'carrierwave',             '0.10.0'
-gem 'fog',                     '1.36.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
