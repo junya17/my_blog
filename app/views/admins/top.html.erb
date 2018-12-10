@@ -1,27 +1,36 @@
 <div class="container">
-	<h2>管理画面トップ</h2>
+	<h2 class="m-2">管理画面トップ</h2>
 	<ul class="list-group mb-2">
-		<li class="list-group-item active">記事</li>
+		<li class="list-group-item bg-dark text-white">記事</li>
 		<li class="list-group-item">
-			<%= link_to '記事一覧', admins_path		 %>
+			<%= link_to '記事一覧', admins_path ,class: "text-dark"	%>
 		</li>
 		<li class="list-group-item">
-			<%= link_to '記事追加', new_admin_path	 %>
+			<%= link_to '記事追加', new_admin_path ,class: "text-dark"	%>
 		</li>
 	</ul>
 	<ul class="list-group mb-2">
-		<li class="list-group-item active">画像</li>
+		<li class="list-group-item bg-dark text-white">カテゴリー</li>
 		<li class="list-group-item">
-			<%= link_to '画像一覧', images_path	 %>
+			<%= link_to 'カテゴリー一覧', categories_index_admin_path ,class: "text-dark"	%>
 		</li>
 		<li class="list-group-item">
-			<%= link_to '画像追加', new_image_path	 %>
+			<%= link_to 'カテゴリー追加', new_category_path ,class: "text-dark"	%>
 		</li>
 	</ul>
 	<ul class="list-group mb-2">
-		<li class="list-group-item active">アカウント</li>
+		<li class="list-group-item bg-dark text-white">画像</li>
 		<li class="list-group-item">
-			<%= link_to 'アカウント編集', edit_user_registration_path	 %>
+			<%= link_to '画像一覧', images_path	,class: "text-dark"	%>
+		</li>
+		<li class="list-group-item">
+			<%= link_to '画像追加', new_image_path ,class: "text-dark" %>
+		</li>
+	</ul>
+	<ul class="list-group mb-2">
+		<li class="list-group-item bg-dark text-white">アカウント</li>
+		<li class="list-group-item">
+			<%= link_to 'アカウント編集', edit_user_registration_path,class: "text-dark" %>
 		</li>
 	</ul>
 </div>
