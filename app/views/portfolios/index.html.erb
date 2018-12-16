@@ -72,25 +72,53 @@
 				<li>
 					<input type="radio" checked="checked" name="slide">
 					<div class="slide">
-						<div class="colorfilter-base">
-							<img src="images/iris.png">
-						</div>
-						<div class="content">
-							<h4>Portfolio One</h4>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
-						</div>
+							<div class="colorfilter-base">
+									<%= video_tag('/videos/iris.mp4',controls: true,:loop => true, :autoplay=>true, class: 'embed-responsive embed-responsive-16by9 mb-3') %>
+							</div>
 					</div>
 				</li>
+
+				<li>
+						<input type="radio" name="slide">
+						<div class="slide">
+							<div class="colorfilter-base">
+									<%= video_tag('/videos/subscript.mov',controls: true,:loop => true, :autoplay=>true, class: 'embed-responsive embed-responsive-16by9 mb-3') %>
+							</div>
+						</div>
+					</li>
+
+					<li>
+							<input type="radio" name="slide">
+							<div class="slide">
+								<div class="colorfilter-base">
+										<%= video_tag('/videos/rails_blog.mp4',controls: true,:loop => true, :autoplay=>true, class: 'embed-responsive embed-responsive-16by9 mb-3') %>
+								</div>
+							</div>
+						</li>
+
 				<li>
 					<input type="radio" name="slide">
 					<div class="slide">
 						<div class="colorfilter-base">
-							<img src="images/product-paper.jpg">
+							<img src="images/waterserver.png">
 						</div>
 
 						<div class="content">
-							<h4>Sample Portfolio Two</h4>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+							<h4>ウォーターサーバーの比較サイト</h4>
+							<p>ウォーターサーバーの口コミ比較サイトです。</p>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<input type="radio" name="slide">
+					<div class="slide">
+							<div class="colorfilter-base">
+									<img src="images/diet.png">
+							  </div>
+						<div class="content">
+							<h4>ダイエット器具の比較サイト</h4>
+							<p>ダイエット器具の比較サイトです。メインで運営していたサイトです。</p>
 						</div>
 					</div>
 				</li>
@@ -98,11 +126,11 @@
 					<input type="radio" name="slide">
 					<div class="slide">
 							<div class="colorfilter-base">
-									<img src="images/blog.jpg">
+									<img src="images/vod.png">
 							  </div>
 						<div class="content">
-							<h4>Sample Portfolio Three</h4>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+							<h4>動画サービス比較サイト</h4>
+							<p>定額制動画サービスの比較と人気作品を視聴できるサイトの紹介</p>
 						</div>
 					</div>
 				</li>
@@ -110,23 +138,11 @@
 					<input type="radio" name="slide">
 					<div class="slide">
 							<div class="colorfilter-base">
-									<img src="images/notepc.jpg">
+									<img src="images/daiku.png">
 							  </div>
 						<div class="content">
-							<h4>Sample Portfolio Four</h4>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<input type="radio" name="slide">
-					<div class="slide">
-							<div class="colorfilter-base">
-									<img src="images/time_desk.jpg">
-							  </div>
-						<div class="content">
-							<h4>Sample Portfolio Five</h4>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+ 							<h4>住宅購入などに関するサイト</h4>
+							<p>建築業の経験から住宅購入に関する情報を紹介しています。</p>
 						</div>
 					</div>
 				</li>
