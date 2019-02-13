@@ -24,9 +24,16 @@ test:
   <<: *default
   database: my_blog_test
 
+# production:
+#   <<: *default
+#   database: heroku_83828e45c785a9c
+#   username: b79bd6dc049085
+#   password: <%= ENV['DATABASE_PASSWORD'] %>
 production:
-  <<: *default
-  database: heroku_83828e45c785a9c
-  username: b79bd6dc049085
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-
+  adapter: mysql2
+  encoding: utf8
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
