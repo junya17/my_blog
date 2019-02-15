@@ -12,7 +12,7 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.0.beta2'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2'
-gem 'pg'
+# gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -42,11 +42,10 @@ gem 'fog', '1.36.0'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'mini_magick'
-
-source 'https://rubygems.org'
 gem 'json'
 gem 'rack-parser'
 gem 'sinatra'
+gem 'rb-readline'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -72,3 +71,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+group :production, :staging do
+    gem 'unicorn'
+end
